@@ -11,8 +11,8 @@
     <div class="app-container">
         
         <div id="page-home" class="page active">
-            <h2 class="main-title">Petualangan Porogapit</h2>
-            <p class="subtitle">Pilih mode bermainmu di bawah ini!</p>
+            <h2 class="main-title">KALKULATOR PEMBAGIAN</h2>
+            <p class="subtitle">Menggunakan metode Porogapit</p>
             
             <div class="menu-list">
                 <button class="btn-menu btn-menu-calc" onclick="navigateTo('calculator')">
@@ -27,7 +27,7 @@
         </div>
 
         <div id="page-calculator" class="page">
-            <button class="btn-back" onclick="navigateTo('home')">⬅ Kembali ke Menu</button>
+            <button class="btn-back" onclick="navigateTo('home')">⬅ Menu Utama</button>
             
             <h2 class="section-title" style="text-align:center; margin-bottom:1rem;">Kalkulator Pintar</h2>
             
@@ -40,8 +40,8 @@
             <div id="errorAlert" class="alert-error"></div>
 
             <div class="button-stack">
-                <button onclick="hitungPorogapit()" class="btn-action btn-orange">Hitung Langkahnya!</button>
-                <button onclick="resetForm()" class="btn-action btn-red">Hapus Semua</button>
+                <button onclick="hitungPorogapit()" class="btn-action btn-orange">Hitung</button>
+                <button onclick="resetForm()" class="btn-action btn-red">Bersihkan</button>
             </div>
             
             <div id="hasilContainer" class="result-wrapper hidden">
@@ -56,7 +56,7 @@
         </div>
 
         <div id="page-exercise" class="page">
-            <button class="btn-back" onclick="navigateTo('home')">⬅ Kembali ke Menu</button>
+            <button class="btn-back" onclick="navigateTo('home')">⬅ Menu Utama</button>
             
             <div class="soal-container">
                 <span id="soalYangDibagi">0</span> : <span id="soalPembagi">0</span>
@@ -86,9 +86,9 @@
         <button class="numpad-btn num-7" onclick="pressNumpad('7')">7</button>
         <button class="numpad-btn num-8" onclick="pressNumpad('8')">8</button>
         <button class="numpad-btn num-9" onclick="pressNumpad('9')">9</button>
-        <button class="numpad-btn btn-del" onclick="pressNumpad('DEL')">Hapus ❌</button>
+        <button class="numpad-btn btn-del" onclick="pressNumpad('DEL')">⌫</button>
         <button class="numpad-btn num-0" onclick="pressNumpad('0')">0</button>
-        <button class="numpad-btn btn-hide" onclick="pressNumpad('HIDE')">Oke 👍</button>
+        <button class="numpad-btn btn-hide" onclick="pressNumpad('HIDE')">🔻</button>
     </div>
     <script src="script.js"></script>
 </body>
