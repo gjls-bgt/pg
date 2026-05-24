@@ -1,0 +1,411 @@
+/* --- Reset & Base Kid-Friendly Style --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #e0f2fe; 
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    padding-bottom: 240px; /* Jaga ruang agar tidak tertutup numpad */
+}
+
+/* --- Mobile Container (Max 450px) --- */
+.app-container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 15px 30px rgba(14, 165, 233, 0.2);
+    padding: 1.5rem;
+    border: 6px solid #fde047; 
+    overflow: hidden;
+    margin: auto;
+}
+
+/* --- Page Management --- */
+.page {
+    display: none;
+    animation: popIn 0.3s ease-out;
+}
+.page.active {
+    display: block;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Typography --- */
+.main-title {
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center;
+    color: #0284c7;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px #bae6fd;
+}
+.subtitle {
+    font-size: 1rem;
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+.section-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0284c7;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Home Menu Buttons --- */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+}
+.btn-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 0px rgba(0,0,0,0.1);
+}
+.btn-menu:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0px rgba(0,0,0,0.1);
+}
+.btn-menu-calc {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    border-bottom: 6px solid #c2410c;
+}
+.btn-menu-quiz {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-bottom: 6px solid #15803d;
+}
+.btn-menu span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    opacity: 0.9;
+}
+
+/* --- Global & Back Buttons --- */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f1f5f9;
+    color: #64748b;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border: 2px solid #cbd5e1;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+}
+.btn-back:hover { background-color: #e2e8f0; }
+
+.button-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    width: 100%;
+}
+.btn-action {
+    width: 100%;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 0.85rem;
+    border-radius: 1.25rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.15);
+}
+.btn-action:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(0,0,0,0.15); }
+.btn-orange { background-color: #ff9f1c; border-bottom: 4px solid #f47a00; }
+.btn-red { background-color: #ff595e; border-bottom: 4px solid #e03a3e; }
+.btn-blue { background-color: #1a8fe3; border-bottom: 4px solid #0f629e; }
+.btn-green { background-color: #2ec4b6; border-bottom: 4px solid #1e968b; }
+
+/* --- Form Inputs --- */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: 3px dashed #cbd5e1;
+}
+.input-field {
+    padding: 0.5rem;
+    border: 3px solid #cbd5e1;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    outline: none;
+    width: 90px;
+    color: #0f172a;
+}
+.input-field:focus {
+    border-color: #ff9f1c;
+}
+.divider-colon {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #64748b;
+}
+
+/* --- Porogapit Grid Input Layout --- */
+.box-input-porogapit {
+    width: 28px;
+    height: 32px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: center;
+    border: 2px solid #94a3b8;
+    border-radius: 6px;
+    outline: none;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8fafc;
+    caret-color: transparent; /* Sembunyikan kursor ketik */
+}
+.box-input-porogapit.active-box {
+    border-color: #eab308 !important;
+    background-color: #fef9c3 !important;
+    box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.3);
+}
+.box-correct {
+    border-color: #2ec4b6 !important;
+    background-color: #cbf3f0 !important;
+    color: #0f766e !important;
+}
+.box-wrong {
+    border-color: #ff595e !important;
+    background-color: #ffe5ec !important;
+    color: #991b1b !important;
+}
+
+/* --- Kustom Kid-Numpad Yang Bisa Muncul/Sembunyi --- */
+.kid-numpad {
+    position: fixed;
+    bottom: -300px; /* Bersembunyi di awal */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 450px;
+    background-color: #f1f5f9;
+    border-top: 6px solid #cbd5e1;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    box-shadow: 0 -10px 25px rgba(0,0,0,0.15);
+    transition: bottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 9999;
+}
+.kid-numpad.show {
+    bottom: 0;
+}
+.numpad-btn {
+    padding: 0.85rem;
+    font-size: 1.35rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+    transition: transform 0.05s;
+}
+.numpad-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
+/* Pewarnaan Tombol Numpad Ceria */
+.numpad-btn.num-1, .numpad-btn.num-6, .numpad-btn.num-8 { background-color: #ff9f1c; border-bottom: 4px solid #cc7a00; }
+.numpad-btn.num-2, .numpad-btn.num-4, .numpad-btn.num-9 { background-color: #3b82f6; border-bottom: 4px solid #1d4ed8; }
+.numpad-btn.num-3, .numpad-btn.num-5, .numpad-btn.num-7 { background-color: #a855f7; border-bottom: 4px solid #7e22ce; }
+
+.numpad-btn.btn-del { background-color: #ff595e; border-bottom: 4px solid #e03a3e; font-size: 1.1rem; }
+.numpad-btn.num-0 { background-color: #06b6d4; border-bottom: 4px solid #0e7490; }
+.numpad-btn.btn-hide { background-color: #2ec4b6; border-bottom: 4px solid #1e968b; font-size: 1.1rem; }
+
+/* --- Feedback Styles --- */
+.alert-error {
+    display: none;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background-color: #ffe5ec;
+    color: #991b1b;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-align: center;
+    border: 2px solid #ff595e;
+}
+.feedback-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    font-weight: 800;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.feedback-success { background-color: #cbf3f0; color: #0f766e; border: 3px solid #2ec4b6; }
+.feedback-wrong { background-color: #ffe5ec; color: #991b1b; border: 3px solid #ff595e; }
+
+/* --- Layout Outputs --- */
+.hidden { display: none !important; }
+.result-wrapper {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+.hasil-eksplisit {
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-align: center;
+    color: #1e293b;
+    background-color: #fef9c3;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    margin-bottom: 1.25rem;
+    border: 3px solid #fde047;
+}
+.text-amber-result { color: #d97706; }
+
+.fraction-inline {
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    margin-left: 0.25rem;
+}
+.fraction-top { border-bottom: 2px solid #1e293b; text-align: center; line-height: 1; padding-bottom: 0.125rem;}
+.fraction-bottom { text-align: center; line-height: 1; padding-top: 0.125rem; }
+
+/* --- Visual Area Porogapit --- */
+.visual-display-box {
+    display: flex;
+    justify-content: center;
+    background-color: #fffdec;
+    border: 3px solid #fef08a;
+    padding: 1.25rem 0.5rem;
+    border-radius: 1.5rem;
+    overflow-x: auto;
+    width: 100%;
+}
+.wrapper-porogapit {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: 0.05em;
+}
+
+.grid-row { display: grid; align-items: center; }
+.grid-cell {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 28px;
+}
+
+.rumah-porogapit {
+    border-top: 3px solid #1e293b;
+    border-left: 3px solid #1e293b;
+    border-top-left-radius: 8px;
+    padding-top: 2px;
+    width: 100%;
+    height: 100%;
+}
+.atap-porogapit {
+    border-top: 3px solid #1e293b;
+    width: 100%;
+    height: 100%;
+    padding-top: 2px;
+}
+
+.cell-hasil-atas {
+    color: #ff595e;
+    background-color: #ffe5ec;
+    border: 2px solid #ff595e;
+    padding: 0 0.15rem;
+    border-radius: 0.25rem;
+    margin-bottom: 3px;
+}
+.cell-pembagi { color: #64748b; }
+.cell-kali { color: #1a8fe3; }
+.cell-sisa-proses { color: #475569; }
+.cell-sisa-akhir { color: #2ec4b6; font-weight: 900; }
+
+.line-pengurang {
+    width: 100%;
+    border-bottom: 3px solid #475569;
+    height: 5px;
+}
+.sign-minus {
+    font-weight: 900;
+    color: #ff595e;
+}
+
+.digit-turun-container {
+    position: relative;
+    width: 100%;
+    color: #2ec4b6;
+}
+.line-bantu-vertikal {
+    position: absolute;
+    right: 50%;
+    bottom: 100%;
+    height: 2.2rem;
+    border-right: 2px dashed rgba(46, 196, 182, 0.7);
+}
+
+.soal-container {
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background-color: #e0f2fe;
+    border-radius: 1.25rem;
+    border: 3px dashed #0284c7;
+    color: #0369a1;
+}
